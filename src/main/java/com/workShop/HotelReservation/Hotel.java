@@ -3,14 +3,14 @@ package com.workShop.HotelReservation;
 public class Hotel {
 
     private String hotelName;
-    private int rate;
+    private int rating;
     private double regularCustomerCost;
     public Hotel() {
     }
 
-    public Hotel(String hotelName, int rate, double regularCustomerCost) {
+    public Hotel(String hotelName, int rating, double regularCustomerCost) {
         this.hotelName = hotelName;
-        this.rate = rate;
+        this.rating = rating;
         this.regularCustomerCost = regularCustomerCost;
     }
 
@@ -22,12 +22,12 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
-    public int getRate() {
-        return rate;
+    public int getRating() {
+        return rating;
     }
 
-    public void setRate(int rate) {
-        this.rate = rate;
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     public double getRegularCustomerCost() {
@@ -40,7 +40,7 @@ public class Hotel {
 
     @Override
     public String toString() {
-        return "Hotel [hotelName=" + hotelName + ", rate=" + rate + ", regularCustomerCost=" + regularCustomerCost
+        return "Hotel [hotelName=" + hotelName + ", rating=" + rating + ", regularCustomerCost=" + regularCustomerCost
                 + "]";
     }
 
