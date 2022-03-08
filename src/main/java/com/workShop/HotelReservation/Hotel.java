@@ -3,13 +3,15 @@ package com.workShop.HotelReservation;
 public class Hotel {
 
     private String hotelName;
+    private int rating;
     private double weekDayRate;
     private double weekendRate;
     public Hotel() {
     }
 
-    public Hotel(String hotelName, int rate, double weekDayRate, double weekendRate) {
+    public Hotel(String hotelName, int rating, double weekDayRate, double weekendRate) {
         this.hotelName = hotelName;
+        this.rating = rating;
         this.weekDayRate = weekDayRate;
         this.weekendRate=weekendRate;
     }
@@ -20,6 +22,14 @@ public class Hotel {
 
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     public double getWeekDayRate() {
@@ -40,7 +50,8 @@ public class Hotel {
 
     @Override
     public String toString() {
-        return "Hotel [hotelName=" + hotelName + ", weekDayRate=" + weekDayRate+ ", weekendRate=" + weekendRate + "]";
+        return "Hotel [hotelName=" + hotelName + ", rating=" + rating + ", weekDayRate=" + weekDayRate
+                + ", weekendRate=" + weekendRate + "]";
     }
 
 
