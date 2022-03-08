@@ -1,55 +1,41 @@
 package com.workShop.HotelReservation;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
-import java.time.LocalDate;
-import java.time.Month;
 
 public class HotelReservationTest {
 
     @Test
     public void givenHotelList_WhenAdded_shouldReturnProperHotelName(){
         HotelReservationIF hotelReservation = new HotelReservation();
-        hotelReservation.addHotel("Bridgewood", 4, 160);
+        hotelReservation.addHotel("Bridgewood",110,90);
         String hotelName = hotelReservation.getHotelList().get(0).getHotelName();
         Assert.assertEquals("Bridgewood", hotelName);
     }
 
     @Test
-    public void givenHotelList_WhenAdded_shouldReturnProperHotelRating(){
+    public void givenHotelList_WhenAdded_shouldReturnWeekDayRate(){
         HotelReservationIF hotelReservation = new HotelReservation();
-        hotelReservation.addHotel("Bridgewood", 4, 160);
-        int hotelRating = hotelReservation.getHotelList().get(0).getRating();
-        Assert.assertEquals(4, hotelRating);
+        hotelReservation.addHotel("Bridgewood",150,50);
+        int weekDayRate = (int) hotelReservation.getHotelList().get(0).getWeekDayRate();
+        Assert.assertEquals(150, weekDayRate);
     }
-
     @Test
-    public void givenHotelList_WhenAdded_shouldReturnRegularCustomerCost(){
+    public void givenHotelList_WhenAdded_shouldReturnWeekendRate(){
         HotelReservationIF hotelReservation = new HotelReservation();
-        hotelReservation.addHotel("Bridgewood", 4, 160);
-        int hotelRegularCustomerCost = (int) hotelReservation.getHotelList().get(0).getRegularCustomerCost();
-        Assert.assertEquals(160, hotelRegularCustomerCost);
+        hotelReservation.addHotel("Bridgewood",220,150);
+        int weekendRate = (int) hotelReservation.getHotelList().get(0).getWeekendRate();
+        Assert.assertEquals(150, weekendRate);
     }
     @Test
     public void givenHotelDetails_WhenSizeMatches_ShoulReturnTrue()
     {
         HotelReservationIF hotelReservation = new HotelReservation();
-        hotelReservation.addHotel("Lakewood", 3, 110);
-        hotelReservation.addHotel("Bridgewood", 4, 160);
-        hotelReservation.addHotel("Ridgewood", 5, 220);
+        hotelReservation.addHotel("Lakewood",110,90);
+        hotelReservation.addHotel("Bridgewood",150,50);
+        hotelReservation.addHotel("Ridgewood",220,150);
         int hotelListSize = hotelReservation.getHotelListSize();
         Assert.assertEquals(3, hotelListSize);
     }
 
-    @Test
-    public void givenHotelDetails_shouldReturnCheapestHotel(){
-        HotelReservation hotelReservation = new HotelReservation();
-        hotelReservation.addHotel("Lakewood", 3, 110);
-        hotelReservation.addHotel("Bridgewood", 4, 160);
-        LocalDate startDate = LocalDate.of(2021, Month.SEPTEMBER, 10);
-        LocalDate endDate = LocalDate.of(2021, Month.SEPTEMBER, 11);
-        Hotel hotel = hotelReservation.getCheapestHotel(startDate, endDate);
-        Assert.assertEquals("Lakewood", hotel.getHotelName());
-    }
 }

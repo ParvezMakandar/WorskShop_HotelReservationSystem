@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public interface HotelReservationIF {
 
-    public void addHotel(String hotelName,int rating, double regularCustomerRate);
-    public int getHotelListSize();
-    public void printHotelList();
-    public ArrayList<Hotel> getHotelList();
+    void addHotel(String hotelName, double weekDayRate, double weekendRate);
+    int getHotelListSize();
+    void printHotelList();
+    ArrayList<Hotel> getHotelList();
 }
