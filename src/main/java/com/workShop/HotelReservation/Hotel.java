@@ -53,7 +53,4 @@ public class Hotel {
         return "Hotel [hotelName=" + hotelName + ", rating=" + rating + ", weekDayRate=" + weekDayRate
                 + ", weekendRate=" + weekendRate + "]";
     }
-
-
-
 }
