@@ -5,9 +5,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Optional;
-import java.util.stream.Collectors;
+
 
 public class HotelReservation implements HotelReservationIF {
 

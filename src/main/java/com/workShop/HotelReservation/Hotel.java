@@ -1,14 +1,12 @@
 package com.workShop.HotelReservation;
 
 public class Hotel {
-
     private String hotelName;
     private int rating;
     private double weekDayRate;
     private double weekendRate;
     public Hotel() {
     }
-
     public Hotel(String hotelName, int rating, double weekDayRate, double weekendRate) {
         this.hotelName = hotelName;
         this.rating = rating;
