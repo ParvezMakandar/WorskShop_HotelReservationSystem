@@ -1,7 +1,6 @@
 package com.workShop.HotelReservation;
 
 public class Hotel {
-
     private String hotelName;
     private int rating;
     private double weekDayRate;
