@@ -12,9 +12,10 @@ public class HotelReservationMain {
         hotelReservation.addHotel("Bridgewood", 4, 150,50,110,50);
         hotelReservation.addHotel("Ridgewood", 5, 220,150,100,40);
         hotelReservation.printHotelList();
-        LocalDate startDate = LocalDate.of(2020, Month.SEPTEMBER, 10);
-        LocalDate endDate = LocalDate.of(2020, Month.SEPTEMBER, 11);
-        hotelReservation.getCheapestHotel(startDate, endDate);
+        LocalDate startDate = LocalDate.of(2021, Month.SEPTEMBER, 10);
+        LocalDate endDate = LocalDate.of(2021, Month.SEPTEMBER, 11);
+        hotelReservation.getCheapestHotel(startDate, endDate,"reward");
+        hotelReservation.getCheapestHotel(startDate, endDate,"regular");
         hotelReservation.getBestRatedHotel(startDate, endDate);
     }
 }
