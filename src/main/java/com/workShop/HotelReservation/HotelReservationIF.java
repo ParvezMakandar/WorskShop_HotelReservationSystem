@@ -3,6 +3,7 @@ package com.workShop.HotelReservation;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+
 public interface HotelReservationIF {
 
      public void addHotel(String hotelName,int rating, double weekDayRate,double weekendRate,double weekdayRewardCustomerRate,double weekendRewardCustomerRate);

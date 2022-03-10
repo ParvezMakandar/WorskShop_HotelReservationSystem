@@ -6,7 +6,6 @@ import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
-
 public class HotelReservation implements HotelReservationIF {
 
     ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
